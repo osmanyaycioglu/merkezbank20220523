@@ -1,0 +1,5 @@
+server:
+  http2:
+    enabled: true
+  port: 9090
+
