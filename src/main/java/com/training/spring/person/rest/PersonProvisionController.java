@@ -1,10 +1,12 @@
 package com.training.spring.person.rest;
 
 import com.training.spring.person.models.Person;
+import com.training.spring.person.rest.error.ErrorObj;
 import com.training.spring.person.rest.mappers.PersonMapper;
 import com.training.spring.person.rest.models.PersonRest;
 import com.training.spring.person.services.PersonProvisionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,5 +33,6 @@ public class PersonProvisionController {
     public String deactivate(@NotNull @PathVariable("pid") Long personId) {
         return "OK";
     }
+
 
 }
