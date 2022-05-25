@@ -3,13 +3,15 @@ package com.training.spring;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/hello/xyz/abc")
 public class HelloController {
 
     @GetMapping
     public String hello1dhgf(){
-        return "Hello world Root";
+        return "Hello world Root " + UUID.randomUUID().toString();
     }
 
     @GetMapping("/hello2/deneme/test")

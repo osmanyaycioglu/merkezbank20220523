@@ -1,9 +1,12 @@
-package com.training.spring;
+package com.training.spring.person.models;
 
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 
 public class Person {
 
+    private Long personId;
+    private String password;
     private String name;
     private String surname;
     private Integer weight;
@@ -59,5 +62,21 @@ public class Person {
                 ", height=" + height +
                 ", birthday=" + birthday +
                 '}';
+    }
+
+    public Long getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(Long personId) {
+        this.personId = personId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

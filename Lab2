@@ -1,0 +1,12 @@
+
+Employee validation annotation ları ekle
+Controllerlarda validation ı aç
+EmployeeProvisionController
+    EmployeeProvisionService
+        EmployeeDataStorage
+EmployeeQueryController
+    EmployeeQueryService
+        EmployeeDataStorage
+
+EmployeeDataStorage
+    Map
