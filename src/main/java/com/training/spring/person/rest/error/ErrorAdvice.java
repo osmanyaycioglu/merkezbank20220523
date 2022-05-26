@@ -43,6 +43,7 @@ public class ErrorAdvice {
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ErrorObj handleException(Exception exception){
+        exception.printStackTrace();
         ErrorObj errorObj = new ErrorObj();
         errorObj.setDesc("Beklenilmedik error oluştu : " + exception.getMessage());
         errorObj.setErrorCode(15000);

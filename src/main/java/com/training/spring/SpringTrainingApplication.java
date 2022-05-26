@@ -1,10 +1,16 @@
 package com.training.spring;
 
+import com.deneme.lib.EngineConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.PropertySource;
 
+//@SpringBootApplication(scanBasePackages = {"com.training.spring","com.deneme.lib"})
 @SpringBootApplication
+@Import(EngineConfiguration.class)
+@PropertySource("classpath:my.properties")
 public class SpringTrainingApplication {
 
     public static void main(String[] args) {
