@@ -20,6 +20,9 @@ public class GreetingsController {
     @Autowired
     private Goodbye goodbye;
 
+    @Autowired
+    private Greetings greetings;
+
     @GetMapping("/hello")
     public String hello(){
         return hello.helloWorld("osman");
