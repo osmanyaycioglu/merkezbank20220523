@@ -16,6 +16,8 @@ public class SpringTrainingApplication {
 
         Goodbye goodbye = (Goodbye) context.getBean("gulegule");
 
+        // Greetings greetingsInt = new Greetings(new Goodbye(),"deneme");
+
 //		Hello hello = new Hello();
 //		Hello hello2 = new Hello();
 //		Hello hello3 = new Hello();

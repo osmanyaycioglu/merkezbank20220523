@@ -12,4 +12,8 @@ public class Goodbye {
         return "Goodbye " + name;
     }
 
+    public void initMe(){
+        System.out.println("Init Hello");
+    }
+
 }

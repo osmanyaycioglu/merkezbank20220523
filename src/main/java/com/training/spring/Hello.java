@@ -13,4 +13,8 @@ public class Hello {
         return "Hello " + counter + " : " + name;
     }
 
+    public void initMe(){
+        System.out.println("Init Hello");
+    }
+
 }
