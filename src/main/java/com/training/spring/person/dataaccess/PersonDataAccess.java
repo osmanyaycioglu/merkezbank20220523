@@ -1,6 +1,7 @@
 package com.training.spring.person.dataaccess;
 
 import com.training.spring.person.data.PersonDataStorage;
+import com.training.spring.person.data.PersonDbDataStorage;
 import com.training.spring.person.models.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import java.util.List;
 public class PersonDataAccess {
 
     @Autowired
-    private PersonDataStorage personDataStorage;
+    private PersonDbDataStorage personDataStorage;
 
     public long insert(Person person){
         return personDataStorage.insert(person);

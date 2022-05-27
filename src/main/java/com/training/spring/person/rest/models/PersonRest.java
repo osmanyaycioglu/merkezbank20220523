@@ -2,6 +2,7 @@ package com.training.spring.person.rest.models;
 
 import javax.validation.constraints.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 public class PersonRest {
 
@@ -25,6 +26,10 @@ public class PersonRest {
     private Integer height;
     @Past
     private LocalDate birthday;
+    @NotNull
+    private AddressRest address;
+
+    private Set<PhoneRest> phones;
 
     public String getName() {
         return name;
@@ -83,5 +88,21 @@ public class PersonRest {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public AddressRest getAddress() {
+        return address;
+    }
+
+    public void setAddress(AddressRest address) {
+        this.address = address;
+    }
+
+    public Set<PhoneRest> getPhones() {
+        return phones;
+    }
+
+    public void setPhones(Set<PhoneRest> phones) {
+        this.phones = phones;
     }
 }

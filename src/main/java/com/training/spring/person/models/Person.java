@@ -1,17 +1,33 @@
 package com.training.spring.person.models;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
+import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Set;
 
+@Entity
+@Table(name = "kisi")
 public class Person {
-
+    @Id
+    @GeneratedValue
     private Long personId;
     private String password;
     private String name;
     private String surname;
     private Integer weight;
+    // @Column(name = "uzunluk")
     private Integer height;
     private LocalDate birthday;
+    @Fetch(FetchMode.JOIN)
+    @OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    private Address address;
+    @Fetch(FetchMode.SUBSELECT)
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    private Set<Phone> phones;
 
     public String getName() {
         return name;
@@ -78,5 +94,21 @@ public class Person {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Set<Phone> getPhones() {
+        return phones;
+    }
+
+    public void setPhones(Set<Phone> phones) {
+        this.phones = phones;
     }
 }

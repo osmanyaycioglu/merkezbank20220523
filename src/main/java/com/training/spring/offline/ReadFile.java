@@ -11,9 +11,9 @@ public class ReadFile {
         System.out.println("File checking");
     }
 
-    @Scheduled(initialDelay = 1_000,cron = "0/10 * * * * *")
-    public void readFile(){
-        System.out.println("File read");
-    }
+//    @Scheduled(initialDelay = 1_000,cron = "0/10 * * * * *")
+//    public void readFile(){
+//        System.out.println("File read");
+//    }
 
 }
