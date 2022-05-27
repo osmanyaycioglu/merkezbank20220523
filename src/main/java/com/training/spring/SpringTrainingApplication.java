@@ -6,11 +6,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 //@SpringBootApplication(scanBasePackages = {"com.training.spring","com.deneme.lib"})
 @SpringBootApplication
 @Import(EngineConfiguration.class)
 @PropertySource("classpath:my.properties")
+@EnableScheduling
 public class SpringTrainingApplication {
 
     public static void main(String[] args) {
