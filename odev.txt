@@ -1,0 +1,53 @@
+1---------------------------------------------
+Customer Projesi yarat
+    Web,Actuator,validation aç
+CustomerRest
+    username
+    password
+    name
+    surname
+    birthday
+
+Customer
+    customerId
+    username
+    password
+    name
+    surname
+    birthday
+ObjectMapper MapStruct kullan
+
+CustomerProvisionController --> CustomerRest
+    CustomerProvisionService --> Customer
+        CustomerDataStorage
+            Map kullan
+CustomerQueryController --> CustomerRest
+    CustomerQueryService --> Customer
+        CustomerDataStorage
+
+2---------------------------------------------
+Validasyon ekle,
+    username -> boş check,size check 6-12
+    password -> regex bul ve geçir
+    name -> boş check,size check 2-20
+    surname -> boş check,size check 3-25
+    birthday -> past date olmalı
+Error Handling yap
+    Kendi error objeni tasarla
+    ErrorAdvice class ı yarat @RestControllerAdvice
+        ExceptionHandler lar koy
+3-------------------------------------------------------
+Customer Objesini -> Entity haline getir
+Proje artık hem Memory(Map) hemde DB den çalışacak hale getir (Profile kullan)
+
+*Opsiyonel
+AddressRest objesi
+    city
+    street
+Address objesi
+    city
+    street
+Bunları Customer objesinin içine koy - Mapper da tanımla
+Address objesini -> Entity haline getir
+Customer da OneToOne ilişki tanımla Address için
+*---!Opsiyonel!---
